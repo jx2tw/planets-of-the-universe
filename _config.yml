@@ -1,3 +1,22 @@
-markdown: redcarpet
+#markdown: redcarpet
 baseurl: /planets-of-the-universe
 exclude: [README.md,'/.*']
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"    
